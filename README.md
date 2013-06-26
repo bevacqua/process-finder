@@ -1,4 +1,5 @@
-node-finder
-===========
+# process-finder
 
-Find node processes with a simple API
+Find processes using a simple API
+
+## #watch(port)
