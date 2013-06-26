@@ -10,6 +10,10 @@ Using `npm`
 $ npm install process-finder --save
 ```
 
+## #find(port, fn(err, pids))
+
+Finds processes listening on the provided `port`, invokes `fn` with an array of `pids` listening on that port.
+
 ## #watch(port)
 
 Returns an `EventEmitter` that allows us to track a port's listening processes.
@@ -23,15 +27,28 @@ Port can be an object of `options`, or just a port.
 }
 ```
 
-Example:
+### #watch Usage
 
 ```js
-var watcher = watch(3000);
+var finder = require('process-finder');
+var port = 3000; // port to watch
+var watcher = finder.watch(port);
 
 watcher.on('listen', function(pid){
-    // do something about it
+    console.log(pid + ' listening on port ' + port);
+});
+
+watcher.on('unlisten', function(pid){
+    console.log(pid + ' no longer listening on port ' + port);
+});
+
+watcher.on('error', console.error);
+watcher.on('update', function(pids){
+    console.log('updated! listeners:', pids);
 });
 ```
+
+### #watch API
 
 #### #watch.stop()
 
@@ -45,7 +62,7 @@ Starts a watch which was previously stopped using `.stop()`
 
 Force-restart the watch.
 
-## #watch events
+### #watch events
 
 Watch extends the `EventEmitter` prototype, and provides a few events you can listen for.
 
