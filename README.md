@@ -41,6 +41,10 @@ Stops a `watch`. It will no longer emit events.
 
 Starts a watch which was previously stopped using `.stop()`
 
+#### #watch.restart()
+
+Force-restart the watch.
+
 ## #watch events
 
 Watch extends the `EventEmitter` prototype, and provides a few events you can listen for.
