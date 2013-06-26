@@ -14,6 +14,18 @@ $ npm install process-finder --save
 
 Finds processes listening on the provided `port`, invokes `fn` with an array of `pids` listening on that port.
 
+### #find Usage
+
+```js
+var finder = require('process-finder');
+var port = 3000;
+
+finder.find(port, function(err, pids){
+    // do something about the pids listening on the port, i.e:
+    pids.forEach(process.kill);
+});
+```
+
 ## #watch(port)
 
 Returns an `EventEmitter` that allows us to track a port's listening processes.
