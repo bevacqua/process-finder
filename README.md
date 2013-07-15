@@ -48,7 +48,7 @@ Port can be an object of `options`, or just a port.
     port: 3000, // the port we listen on
     frequency: 5000, // the frequency with which the port is scanned for changes
     elevate: false, // whether to use `sudo`, to get elevated priviledges
-    log: false // if enabled, a verbose `log` event will be emitted
+    info: false // if enabled, a verbose `info` event will be emitted
 }
 ```
 
@@ -111,7 +111,7 @@ Triggers when a `pid` is detected to be no longer listening on the port we're wa
 
 Triggers every time the port is scanned for changes.
 
-#### #watch.on('log', fn(data, internal))
+#### #watch.on('info', fn(data, internal))
 
 `data` is the output of the command that checks the status of the port. `internal` will contain any internal errors that might have been suppressed.
 
