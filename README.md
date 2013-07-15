@@ -26,6 +26,15 @@ finder.find(port, function(err, pids){
 });
 ```
 
+Port can be an object of `options`, or just a port.
+
+```js
+{
+    port: 3000, // the port we listen on
+    elevate: false // whether to use `sudo`, to get elevated priviledges
+}
+```
+
 ## #watch(port)
 
 Returns an `EventEmitter` that allows us to track a port's listening processes.
@@ -35,7 +44,8 @@ Port can be an object of `options`, or just a port.
 ```js
 {
     port: 3000, // the port we listen on
-    frequency: 5000 // the frequency with which the port is scanned for changes
+    frequency: 5000, // the frequency with which the port is scanned for changes
+    elevate: false // whether to use `sudo`, to get elevated priviledges
 }
 ```
 
