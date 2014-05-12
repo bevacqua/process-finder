@@ -118,3 +118,11 @@ Triggers every time the port is scanned for changes.
 #### #watch.on('error', fn(err))
 
 Triggers whenever an error is thrown.
+
+# CLI
+
+The CLI allows you to wait on a port
+
+```shell
+procfinder --wait --port 3000
+```

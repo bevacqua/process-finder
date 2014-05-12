@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var procfinder = require('../finder');
+var argv = require('minimist')(process.argv.slice(2));
+
+if (wait) {
+  watch();
+}
+
+function watch () {
+  var watcher = finder.watch(argv.port);
+
+  watcher.on('listen', function (pid) {
+    console.log('process %s listening on port %s', pid, argv.port);
+    process.exit(0);
+  });
+}

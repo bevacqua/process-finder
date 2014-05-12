@@ -4,10 +4,10 @@
   "homepage": "https://github.com/bevacqua/process-finder",
   "author": {
     "name": "Nicolas Bevacqua",
-    "email": "nicolasbevacqua@gmail.com",
-    "url": "http://www.ponyfoo.com"
+    "email": "hello@bevacqua.io",
+    "url": "http://ponyfoo.com"
   },
-  "version": "0.0.7",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/bevacqua/process-finder.git"
@@ -18,8 +18,7 @@
   "dependencies": {
   },
   "main": "./finder.js",
-  "engines": {
-    "node": "0.10.6",
-    "npm": "1.2.x"
+  "bin": {
+    "procfinder": "bin/procfinder"
   }
 }
