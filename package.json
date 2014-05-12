@@ -16,6 +16,7 @@
     "url": "https://github.com/bevacqua/process-finder/issues"
   },
   "dependencies": {
+    "minimist": "^0.1.0"
   },
   "main": "./finder.js",
   "bin": {
