@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-var procfinder = require('../finder');
+var finder = require('../finder');
 var argv = require('minimist')(process.argv.slice(2));
 
-if (wait) {
+if (argv.wait) {
   watch();
 }
 
