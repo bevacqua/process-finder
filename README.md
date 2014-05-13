@@ -46,7 +46,7 @@ Port can be an object of `options`, or just a port.
 ```js
 {
     port: 3000, // the port we listen on
-    frequency: 5000, // the frequency with which the port is scanned for changes
+    frequency: 200, // the frequency with which the port is scanned for changes
     elevate: false, // whether to use `sudo`, to get elevated priviledges
     info: false // if enabled, a verbose `info` event will be emitted
 }
