@@ -126,3 +126,5 @@ The CLI allows you to wait on a port
 ```shell
 procfinder --wait --port 3000
 ```
+
+Once a process starts listening on that port, the CLI will output its `pid` and exit.
